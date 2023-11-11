@@ -3,7 +3,6 @@
 #include <cstdio>
 #include "benchmarking.h"
 #include "io.h"
-#include "trees.h"
 
 using namespace std;
 using namespace Benchmarking;
