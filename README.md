@@ -1,10 +1,10 @@
 # File-Reading
 
-Do a study on various file reading techniques in C and C++ and choose the best one based on the need of the project or an organization
+Do a study on various file reading techniques in C and C++
 
 ## Objective
 
-Benchmark various file-reading techniques and test some theories about C or C++ functions code runtimes relative to each other:
+Benchmark various file-reading techniques and test some theories about code runtimes relative to each other:
 
 * Read a large file and store all the new lines in a vector of string for further processing.
 * Can be any C++ standard or level of optimization during compile.
