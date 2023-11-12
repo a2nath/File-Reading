@@ -32,8 +32,8 @@ inline std::string strerror()
     return std::strerror(errno);
 }
 
-/* make a system call, return 0 if success, or -1 */
-inline int syscall(std::string input_command, std::string& out)
+/* make a system pipe call, return 0 if success, or -1 */
+inline int pipecall(std::string input_command, std::string& out)
 {
     std::array<char, 128> buffer;
     std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(input_command.c_str(), "r"), pclose);
@@ -47,7 +47,7 @@ inline int syscall(std::string input_command, std::string& out)
 
     if (out.empty())
     {
-        error = "System call did not succeed with input " + input_command + "\n";
+        error = "Pipe call did not succeed with input " + input_command + "\n";
         return -1;
     }
 
@@ -55,11 +55,11 @@ inline int syscall(std::string input_command, std::string& out)
 
 }
 
-/* takes a system command and returns the output */
-inline std::string syscall(std::string input_command)
+/* takes a system pipe command and returns the output */
+inline std::string pipecall(std::string input_command)
 {
     std::string output;
-    if (syscall(input_command, output) == OK)
+    if (pipecall(input_command, output) == OK)
     {
         return output;
     }

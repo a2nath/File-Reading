@@ -23,13 +23,13 @@ namespace IO
     {
         namespace ifstream_method
         {
-            void grep_newlines_read_line_by_line_and_reserve(std::string filename, std::vector<std::string>& out)
+            void pipe_newlines_read_line_by_line_and_reserve(std::string filename, std::vector<std::string>& out)
             {
-                cout << "Executing grep_newlines_read_line_by_line_and_reserve" << endl;
+                cout << "Executing pipe_newlines_read_line_by_line_and_reserve" << endl;
                 std::ifstream file(filename, std::ios::in | std::ios::binary);
 
                 std::string line_count;
-                if (syscall(count_new_lines(filename), line_count) == OK)
+                if (pipecall(count_new_lines(filename), line_count) == OK)
                 {
                     line_count = line_count.substr(0, line_count.find(' '));
 
