@@ -41,6 +41,9 @@ namespace IO
                     }
                 }
                 file.close();
+
+                if (out.empty())
+                    throw std::runtime_error("Error: File is empty or not accessible. " + strerror());
             }
 
             void istreambuf_reserve_and_readfile_directly_line_by_line(std::string filename, std::vector<std::string>& out)
@@ -64,6 +67,9 @@ namespace IO
                     out.emplace_back();
                 }
                 file.close();
+
+                if (out.empty())
+                    throw std::runtime_error("Error: File is empty or not accessible. " + strerror());
             }
 
             void istream_reserve_and_readfile_directly_line_by_line(std::string filename, std::vector<std::string>& out)
@@ -83,6 +89,9 @@ namespace IO
                     out.emplace_back();
                 }
                 file.close();
+
+                if (out.empty())
+                    throw std::runtime_error("Error: File is empty or not accessible. " + strerror());
             }
 
             void istreambuf_read_into_reserved_ss_and_get_wholefile_and_reserve(std::string filename, std::vector<std::string>& out)
@@ -117,6 +126,9 @@ namespace IO
                 {
                     out.emplace_back();
                 }
+
+                if (out.empty())
+                    throw std::runtime_error("Error: File is empty or not accessible. " + strerror());
             }
 
             void istreambuf_read_into_reserved_ss_and_get_wholefile(std::string filename, std::vector<std::string>& out)
@@ -155,6 +167,9 @@ namespace IO
                 {
                     out.emplace_back();
                 }
+
+                if (out.empty())
+                    throw std::runtime_error("Error: File is empty or not accessible. " + strerror());
             }
 
             void istreambuf_read_into_ss_and_get_wholefile_and_reserve(std::string filename, std::vector<std::string>& out)

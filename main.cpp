@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
     {
         output.clear();
         auto time = GetTimeMs64();
-        IO::reserve_first::ifstream_method::grep_newlines_read_line_by_line_and_reserve(inputfile, output);
+        IO::reserve_first::ifstream_method::pipe_newlines_read_line_by_line_and_reserve(inputfile, output);
         cout << "Runtime: " << GetTimeMs64() - time << " ms" << endl;
 
         output.clear();
