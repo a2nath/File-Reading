@@ -1,10 +1,10 @@
 # File-Reading
 
-Do a study on various file reading techniques in C and C++ and choose the best one based on the need of the project or an organization
+Do a study on various file reading techniques in C and C++
 
 ## Objective
 
-Fastest function to achieve all of this wins
+Benchmark various file-reading techniques and test some theories about code runtimes relative to each other:
 
 * Read a large file and store all the new lines in a vector of string for further processing.
 * Can be any C++ standard or level of optimization during compile.
@@ -38,5 +38,10 @@ We will take the average from multiple runs for each function and determine the 
 | read_FILE_line_by_line  | 7.49 | 7.65 | 8.15 | 7.48 | 7.59 | 7.50 | 7.49 | 7.48 | 7.65 | 7.50 |
 
 <p align="center">
-  <img width="460" height="300" src="results/graph.png">
+  <img src="results/graph.png">
 </p>
+
+# Further study
+* add nmap
+* incorporate community feedback
+* add delimeter separation for each line and add multi-threading to check if that's faster
